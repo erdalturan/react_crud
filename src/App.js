@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route  } from 'react-router-dom';
+import 'antd';
+import HeaderMenu from './Components/Design/Header';
+import Create from './Components/Users/Create';
+import Update  from './Components/Users/Update';
+import Index from './Components/Users/Index';
+import UserList from './Components/Users/UserList';
+import SignPage from './Components/Users/SignForm'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router> 
+      <HeaderMenu />
+          <Switch>
+              <Route exact path ={'/'} component={SignPage} />
+              <Route exact path='/users/Index' component={ Index } />
+              <Route path='/users/create' component={ Create } />
+              <Route path='/users/edit/:id' component={ Update } />
+              <Route path='/users/list' component={ UserList } />
+          </Switch>
+  </Router>
   );
 }
 

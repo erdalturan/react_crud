@@ -1,11 +1,14 @@
 {
   "name": "crud",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
+    "antd": "^3.23.6",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "reqwest": "^2.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +30,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "React Crud Applicaton",
+  "main": "index.js",
+  "repository": "https://github.com/erdalturan/react_crud",
+  "author": "Erdal Turan <erdalturan@gmail.com>",
+  "license": "MIT"
 }
